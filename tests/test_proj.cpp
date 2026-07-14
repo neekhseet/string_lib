@@ -7,6 +7,6 @@ TEST(ProjTest, Example) { EXPECT_EQ(10, 10); };
 
 TEST(ProjTest, CalcStringLength)
 {
-    size_t res = string_len(&str);
+    size_t res = string_len(str);
     ASSERT_EQ(11, res);
 }
