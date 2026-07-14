@@ -16,3 +16,12 @@ TEST(ProjTest, NullStringLength)
     size_t res = string_len(NULL);
     ASSERT_EQ(0, res);
 };
+
+TEST(ProjTest, StopWhenGreateThanMaxLen)
+{
+    size_t res = string_len(
+        "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean mas"
+    );
+    ASSERT_EQ(100, res);
+};
+
