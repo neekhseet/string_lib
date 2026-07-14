@@ -1,7 +1,12 @@
 #pragma once
 #include <stddef.h>
 
-size_t string_len(const char *str)
-{
-    return 11;
-};
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+size_t string_len(const char *str);
+
+#ifdef __cplusplus
+}
+#endif
