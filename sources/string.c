@@ -12,3 +12,13 @@ size_t string_len(const char *str)
 
     return len;
 }
+
+void string_copy(char *dest, const char *src)
+{
+    int i = 0;
+    for (; src[i] != '\0' && i < MAX_LEN; ++i)
+    {
+        dest[i] = src[i];
+    };
+    dest[i] = '\0';
+}
