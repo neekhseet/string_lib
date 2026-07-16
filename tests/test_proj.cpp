@@ -25,3 +25,10 @@ TEST(ProjTest, StopWhenGreateThanMaxLen)
     ASSERT_EQ(100, res);
 };
 
+
+TEST(ProjTest, CopyString)
+{
+    char str2[MAX_LEN];
+    string_copy(str2, str);
+    ASSERT_STREQ("Abrakadabra", str2);
+};
