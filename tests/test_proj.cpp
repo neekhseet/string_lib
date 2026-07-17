@@ -84,3 +84,9 @@ TEST(ProjTest, GetFindCharFromStringIndex)
     int indx = string_find_char_index(str, 'a');
     ASSERT_EQ(indx, 3);
 }
+
+TEST(ProjTest, FindAndGetSubstring)
+{
+    char *substring = string_substr(substring, "kad");
+    ASSERT_STREQ(substring, "kad");
+}
