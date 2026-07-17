@@ -13,12 +13,20 @@ size_t string_len(const char *str)
     return len;
 }
 
-void string_copy(char *dest, const char *src)
+void string_copy(char **dest, const char *src)
 {
+    size_t src_len = string_len(src);
+    if (src_len <= 0 ) return;
+
+    char *temp = realloc(*dest, src_len + 1);
+    if (temp == NULL) return;
+    *dest = temp;
+
     int i = 0;
     for (; src[i] != '\0' && i < MAX_LEN; ++i)
     {
-        dest[i] = src[i];
+        (*dest)[i] = src[i];
     };
-    dest[i] = '\0';
+    
+    (*dest)[i] = '\0';
 }

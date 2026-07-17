@@ -1,5 +1,6 @@
 #pragma once
 #include <stddef.h>
+#include <stdlib.h>
 
 #ifdef __cplusplus
 extern "C" {
@@ -8,7 +9,7 @@ extern "C" {
 #define MAX_LEN 100
 
 size_t string_len(const char *str);
-void string_copy(char *dest, const char *src);
+void string_copy(char **dest, const char *src);
 
 #ifdef __cplusplus
 }
