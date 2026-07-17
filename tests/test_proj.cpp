@@ -72,3 +72,9 @@ TEST(ProjTest, CompareStringsWhereSame)
     ASSERT_EQ(res, 0);
     free(str2);
 }
+
+TEST(ProjTest, FindCharFromString)
+{
+    char ch = string_find_char(str, 'a');
+    ASSERT_EQ(ch, 'a');
+}
