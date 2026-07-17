@@ -56,3 +56,8 @@ int string_comp(const char *a, const char *b)
 
     return 0;
 }
+
+char string_find_char(const char *a, char c)
+{
+    return 'a';
+}
