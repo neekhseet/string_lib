@@ -29,14 +29,14 @@ TEST(ProjTest, StopWhenGreateThanMaxLen)
 
 TEST(ProjTest, CopyString)
 {
-    char *str2 = (char *)malloc(sizeof(char) * MAX_LEN);
+    char *str2 = NULL;
     string_copy(&str2, str);
     ASSERT_STREQ("Abrakadabra", str2);
 };
 
 TEST(ProjTest, DynamicChangeMemorySizeOfString)
 {
-    char *str2 = (char *)malloc(sizeof(char) * MAX_LEN);
+    char *str2 = NULL;
     string_copy(&str2, str);
     ASSERT_STREQ("Abrakadabra", str2);
     free(str2);
@@ -44,8 +44,11 @@ TEST(ProjTest, DynamicChangeMemorySizeOfString)
 
 TEST(ProjTest, CompareStringsWhereSecondGreater)
 {
-    char *str2 = "Abradabara"
-    int res = string_compare(str2, str);
-    ASSERT_EQ(-1, res);
+    char *str2 = NULL;
+    string_copy(&str2, "Abradabra");
+    int res = string_comp(str2, str);
+
+    ASSERT_LT(res, 0);
+    
     free(str2);
 }
