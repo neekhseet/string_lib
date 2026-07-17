@@ -78,3 +78,9 @@ TEST(ProjTest, FindCharFromString)
     char ch = string_find_char(str, 'a');
     ASSERT_EQ(ch, 'a');
 }
+
+TEST(ProjTest, GetFindCharFromStringIndex)
+{
+    int indx = string_find_char_index(str, 'a');
+    ASSERT_EQ(indx, 3);
+}
