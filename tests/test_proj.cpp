@@ -41,3 +41,11 @@ TEST(ProjTest, DynamicChangeMemorySizeOfString)
     ASSERT_STREQ("Abrakadabra", str2);
     free(str2);
 }
+
+TEST(ProjTest, CompareStringsWhereSecondGreater)
+{
+    char *str2 = "Abradabara"
+    int res = string_compare(str2, str);
+    ASSERT_EQ(-1, res);
+    free(str2);
+}
