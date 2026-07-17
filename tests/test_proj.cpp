@@ -62,3 +62,13 @@ TEST(ProjTest, CompareStringsWhereSecondLess)
     ASSERT_GT(res, 0);
     free(str2);
 }
+
+TEST(ProjTest, CompareStringsWhereSame)
+{
+    char *str2 = NULL;
+    string_copy(&str2, "Abrakadabra");
+    int res = string_comp(str2, str);
+
+    ASSERT_EQ(res, 0);
+    free(str2);
+}
