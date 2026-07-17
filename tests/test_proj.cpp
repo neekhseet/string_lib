@@ -1,6 +1,7 @@
 #include "../includes/string.h"
 #include <gtest/gtest.h>
 
+
 const char *str = "Abrakadabra";
 
 TEST(ProjTest, Example) { EXPECT_EQ(10, 10); };
@@ -25,3 +26,18 @@ TEST(ProjTest, StopWhenGreateThanMaxLen)
     ASSERT_EQ(100, res);
 };
 
+
+TEST(ProjTest, CopyString)
+{
+    char *str2 = (char *)malloc(sizeof(char) * MAX_LEN);
+    string_copy(&str2, str);
+    ASSERT_STREQ("Abrakadabra", str2);
+};
+
+TEST(ProjTest, DynamicChangeMemorySizeOfString)
+{
+    char *str2 = (char *)malloc(sizeof(char) * MAX_LEN);
+    string_copy(&str2, str);
+    ASSERT_STREQ("Abrakadabra", str2);
+    free(str2);
+}
