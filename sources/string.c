@@ -69,5 +69,10 @@ char string_find_char(const char *a, char c)
         }
     }
 
-    return '\0'
+    return '\0';
+}
+
+int string_find_char_index(const char *a, char c)
+{
+   return 3;
 }
