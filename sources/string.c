@@ -56,3 +56,30 @@ int string_comp(const char *a, const char *b)
 
     return 0;
 }
+
+char string_find_char(const char *a, char c)
+{
+    if (a == NULL) return '\0';
+
+    for (int i = 0; a[i] != '\0' && i < MAX_LEN; ++i)
+    {
+        if (a[i] == c)
+        {
+            return c;
+        }
+    }
+
+    return '\0';
+}
+
+int string_find_char_index(const char *a, char c)
+{
+    if (a == NULL) return -1;
+
+    for (int i = 0; a[i] != '\0' && i < MAX_LEN; ++i)
+    {
+        if (a[i] == c) return i;
+    }
+
+    return -1;
+}
