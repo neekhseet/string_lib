@@ -74,5 +74,12 @@ char string_find_char(const char *a, char c)
 
 int string_find_char_index(const char *a, char c)
 {
-   return 3;
+    if (a == NULL) return -1;
+
+    for (int i = 0; a[i] != '\0' && i < MAX_LEN; ++i)
+    {
+        if (a[i] == c) return i;
+    }
+
+    return -1;
 }
