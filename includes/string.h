@@ -10,6 +10,7 @@ extern "C" {
 
 size_t string_len(const char *str);
 void string_copy(char **dest, const char *src);
+int string_comp(const char *a, const char *b);
 
 #ifdef __cplusplus
 }

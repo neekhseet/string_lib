@@ -30,3 +30,8 @@ void string_copy(char **dest, const char *src)
     
     (*dest)[i] = '\0';
 }
+
+int string_comp(const char *a, const char *b)
+{
+    return -1;
+}
