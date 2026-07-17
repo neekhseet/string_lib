@@ -32,6 +32,7 @@ TEST(ProjTest, CopyString)
     char *str2 = NULL;
     string_copy(&str2, str);
     ASSERT_STREQ("Abrakadabra", str2);
+    free(str2);
 };
 
 TEST(ProjTest, DynamicChangeMemorySizeOfString)
@@ -49,6 +50,15 @@ TEST(ProjTest, CompareStringsWhereSecondGreater)
     int res = string_comp(str2, str);
 
     ASSERT_LT(res, 0);
-    
+    free(str2);
+}
+
+TEST(ProjTest, CompareStringsWhereSecondLess)
+{
+    char *str2 = NULL;
+    string_copy(&str2, "Zbrakadabra");
+    int res = string_comp(str2, str);
+
+    ASSERT_GT(res, 0);
     free(str2);
 }
