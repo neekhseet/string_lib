@@ -90,3 +90,9 @@ TEST(ProjTest, FindAndGetSubstring)
     char *substring = string_substr(str, "kad");
     ASSERT_STREQ(substring, "kad");
 }
+
+TEST(ProjTest, TryToExtractEmptySubstring)
+{
+    char *substring = string_substr(str, "");
+    ASSERT_EQ(substring, nullptr);
+}
