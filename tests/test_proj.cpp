@@ -100,10 +100,16 @@ TEST(ProjTest, TryToExtractEmptySubstring)
 TEST(ProjTest, ConcatTwoStrings)
 {
     char *str1 = nullptr;
-    string_copy(&str, "Hello, ");
     char *str2 = nullptr;
-    string_copy(&str, "world!");
+
+    string_copy(&str1, "Hello, ");
+    string_copy(&str2, "world!");
 
     char *res = string_concat(str1, str2);
+    
     EXPECT_STREQ(res, "Hello, world!");
+
+    free(str1);
+    free(str2);
+    free(res); 
 }
