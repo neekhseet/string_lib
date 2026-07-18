@@ -83,3 +83,10 @@ int string_find_char_index(const char *a, char c)
 
     return -1;
 }
+
+char* string_substr(const char *src, char substr[])
+{
+    char *str = (char *)malloc(sizeof(char) * string_len(substr));
+    string_copy(&str, substr);
+    return str;
+}
