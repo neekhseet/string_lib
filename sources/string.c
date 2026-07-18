@@ -111,3 +111,10 @@ char* string_substr(const char *src,const char *substr)
     }
     return NULL;
 }
+
+char* string_concat(const char *a, const char *b)
+{
+    char *res = NULL;
+    string_copy(&res, "Hello, world!");
+    return res;
+}
