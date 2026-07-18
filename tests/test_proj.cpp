@@ -87,6 +87,6 @@ TEST(ProjTest, GetFindCharFromStringIndex)
 
 TEST(ProjTest, FindAndGetSubstring)
 {
-    char *substring = string_substr(substring, "kad");
+    char *substring = string_substr(str, "kad");
     ASSERT_STREQ(substring, "kad");
 }
