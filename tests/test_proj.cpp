@@ -84,3 +84,15 @@ TEST(ProjTest, GetFindCharFromStringIndex)
     int indx = string_find_char_index(str, 'a');
     ASSERT_EQ(indx, 3);
 }
+
+TEST(ProjTest, FindAndGetSubstring)
+{
+    char *substring = string_substr(str, "kad");
+    ASSERT_STREQ(substring, "kad");
+}
+
+TEST(ProjTest, TryToExtractEmptySubstring)
+{
+    char *substring = string_substr(str, "");
+    ASSERT_EQ(substring, nullptr);
+}
