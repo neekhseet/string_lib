@@ -84,9 +84,30 @@ int string_find_char_index(const char *a, char c)
     return -1;
 }
 
-char* string_substr(const char *src, char substr[])
+char* string_substr(const char *src,const char *substr)
 {
-    char *str = (char *)malloc(sizeof(char) * string_len(substr));
-    string_copy(&str, substr);
-    return str;
+    if (src == NULL || substr == NULL) return NULL;
+    if (substr[0] == '\0') return NULL;
+
+    size_t substr_len = string_len(substr);
+
+    for (int i = 0; src[i] != '\0' && i < MAX_LEN; ++i)
+    {   
+        int j = 0;
+        while (src[i + j] == substr[j] && substr[j] != '\0' && (i + j) < MAX_LEN) {
+            ++j;
+        }
+
+        if (j == substr_len) {
+            char *res = (char *)calloc(substr_len + 1, sizeof(char));
+            if (res == NULL) return NULL;
+
+            for (int k = 0; k < substr_len; ++k) {
+                res[k] = src[i + k];
+            }
+            
+            return res;
+        }
+    }
+    return NULL;
 }

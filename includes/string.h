@@ -13,7 +13,7 @@ void string_copy(char **dest, const char *src);
 int string_comp(const char *a, const char *b);
 char string_find_char(const char *a, char c);
 int string_find_char_index(const char *a, char c);
-char* string_substr(const char *src, char substr[]);
+char* string_substr(const char *src, const char *substr);
 #ifdef __cplusplus
 }
 #endif
