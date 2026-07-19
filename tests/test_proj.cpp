@@ -134,3 +134,11 @@ TEST(ProjTest, StringEndsWithSufix)
     int res = string_ends_with(str, "bra");
     EXPECT_EQ(res, 1);
 }
+
+TEST(ProjTest, StringsEndsAndStartWithSufix)
+{
+    int starts = string_starts_with(str, NULL);
+    EXPECT_EQ(starts, 0);
+    int ends = string_ends_with(str, NULL);
+    EXPECT_EQ(ends, 0);
+}
