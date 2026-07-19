@@ -126,5 +126,5 @@ TEST(ProjTest, GetReversedString)
 TEST(ProjTest, StringStartsWithPrefix)
 {
     int res = string_starts_with(str, "Abra");
-    EXPECT_STREQ(res, 1);
+    EXPECT_EQ(res, 1);
 }
