@@ -131,6 +131,6 @@ TEST(ProjTest, StringStartsWithPrefix)
 
 TEST(ProjTest, StringEndsWithSufix)
 {
-    int res = string_ends_with(str, "bra")
+    int res = string_ends_with(str, "bra");
     EXPECT_EQ(res, 1);
 }
