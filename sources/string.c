@@ -164,3 +164,8 @@ int string_starts_with(const char *dest, const char *prefix)
 
     return 1;
 }
+
+int string_ends_with(const char *dest, const char *sufix)
+{
+    return 1;
+}
