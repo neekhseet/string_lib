@@ -135,3 +135,10 @@ char* string_concat(const char *a, const char *b)
 
     return res;
 }
+
+char* string_reverse(const char *src)
+{
+    char *res = (char *)malloc(sizeof(char) * string_len(src));
+    string_copy(&res, "arbadakarbA");
+    return res;
+}

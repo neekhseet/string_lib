@@ -15,6 +15,7 @@ char string_find_char(const char *a, char c);
 int string_find_char_index(const char *a, char c);
 char* string_substr(const char *src, const char *substr);
 char* string_concat(const char *a, const char *b);
+char* string_reverse(const char *src);
 #ifdef __cplusplus
 }
 #endif
