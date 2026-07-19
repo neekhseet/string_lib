@@ -164,8 +164,23 @@ int string_starts_with(const char *dest, const char *prefix)
 
     return 1;
 }
-
 int string_ends_with(const char *dest, const char *sufix)
 {
+    if (dest == NULL || sufix == NULL) return 0;
+
+    size_t dest_len = string_len(dest);
+    size_t sufix_len = string_len(sufix);
+
+    if (sufix_len > dest_len) return 0;
+
+    const char *dest_ptr = dest + (dest_len - sufix_len);
+
+    while (*sufix != '\0') 
+    {
+        if (*dest_ptr != *sufix) return 0;
+        dest_ptr++;
+        sufix++;
+    }
+
     return 1;
 }
