@@ -111,3 +111,27 @@ char* string_substr(const char *src,const char *substr)
     }
     return NULL;
 }
+
+char* string_concat(const char *a, const char *b)
+{
+    if (!a || !b) return NULL;
+
+    size_t len_a = string_len(a);
+    size_t len_b = string_len(b);
+
+    char *res = (char *)malloc(len_a + len_b + 1);
+    if (!res) return NULL;
+
+    char *dst = res;
+    while (*a != '\0') {
+        *dst++ = *a++;
+    }
+
+    while (*b != '\0') {
+        *dst++ = *b++;
+    }
+
+    *dst = '\0';
+
+    return res;
+}

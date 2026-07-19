@@ -14,6 +14,7 @@ int string_comp(const char *a, const char *b);
 char string_find_char(const char *a, char c);
 int string_find_char_index(const char *a, char c);
 char* string_substr(const char *src, const char *substr);
+char* string_concat(const char *a, const char *b);
 #ifdef __cplusplus
 }
 #endif
