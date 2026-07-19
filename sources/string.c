@@ -153,3 +153,8 @@ char* string_reverse(const char *src)
     
     return res;
 }
+
+int string_starts_with(const char *dest, const char *prefix)
+{
+    return 1;
+}

@@ -16,6 +16,7 @@ int string_find_char_index(const char *a, char c);
 char* string_substr(const char *src, const char *substr);
 char* string_concat(const char *a, const char *b);
 char* string_reverse(const char *src);
+int string_starts_with(const char *dest, const char *prefix);
 #ifdef __cplusplus
 }
 #endif
