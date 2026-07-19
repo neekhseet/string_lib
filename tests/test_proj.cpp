@@ -113,3 +113,12 @@ TEST(ProjTest, ConcatTwoStrings)
     free(str2);
     free(res); 
 }
+
+TEST(ProjTest, GetReversedString)
+{
+    char *reversed = nullptr;
+    reversed = string_reverse(str);
+    EXPECT_STREQ(reversed, "arbadakarbA");
+
+    free(reversed);
+}
