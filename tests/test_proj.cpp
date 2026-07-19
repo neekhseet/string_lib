@@ -122,3 +122,9 @@ TEST(ProjTest, GetReversedString)
 
     free(reversed);
 }
+
+TEST(ProjTest, StringStartsWithPrefix)
+{
+    int res = string_starts_with(str, "Abra");
+    EXPECT_STREQ(res, 1);
+}
