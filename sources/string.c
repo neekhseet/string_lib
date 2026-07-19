@@ -156,5 +156,11 @@ char* string_reverse(const char *src)
 
 int string_starts_with(const char *dest, const char *prefix)
 {
+    if (dest == NULL || prefix == NULL) return 0;
+
+    size_t prefix_len = string_len(prefix);
+    for (int i = 0; i < prefix_len; ++i)
+        if (dest[i] != prefix[i]) return 0;
+
     return 1;
 }
